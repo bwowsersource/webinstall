@@ -1,0 +1,4 @@
+CNF_DESKTOP_DEST="~/.local/share/applications"
+CNF_EXEC="firefox -new-window"
+# xdg-open ${URL}
+CNF_TEMPLATE="elementry.template"

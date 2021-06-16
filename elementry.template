@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=${TITLE}
+Exec=${EXEC}
+Type=Application
+Icon=${ICON}
