@@ -1,4 +1,14 @@
 CNF_DESKTOP_DEST="~/.local/share/applications"
-CNF_EXEC="firefox -new-window"
+
+CNF_EXEC="firefox -new-window "
+#"google-chrome --app="
+#"firefox -new-window "
 # xdg-open ${URL}
-CNF_TEMPLATE="elementry.template"
+CNF_TEMPLATE="platforms/elementary/elementry.template"
+
+
+# browser templates
+# these scripts can override values set above
+
+CNF_OS_TEMPLATE="elementary"
+CNF_BROWSER_TEMPLATE="firefox"
