@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #base values
-ROOT="$(dirname "$0")"
+ROOT=$(pwd)  #"$(dirname "$0")"
+echo ROOT $ROOT
 TEMPLATE_INSTALL_SCRIPT="app-install.sh"
 PROFILE_NAME=$3
 
