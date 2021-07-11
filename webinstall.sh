@@ -6,8 +6,10 @@ TEMPLATE_INSTALL_SCRIPT="app-install.sh"
 PROFILE_NAME=$3
 
 source $ROOT/config
-ASSETS_DIR=${ROOT}/installed-assets
 
+# create assets folder if not existing
+ASSETS_DIR=${ROOT}/installed-assets
+mkdir -p $ASSETS_DIR
 
 
 if [ $1 == "--help" ] || [ $1 == "-h" ]; then
