@@ -1,0 +1,19 @@
+#TabsToolbar
+{
+    visibility: collapse;
+}
+
+#back-button
+{
+    display: none;
+}
+
+#forward-button
+{
+    display: none;
+}
+
+#userContext-icons
+{
+    visibility: collapse;
+}
