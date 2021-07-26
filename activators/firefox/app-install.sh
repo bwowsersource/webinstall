@@ -36,6 +36,8 @@ echo "user_pref(\"browser.link.open_newwindow\", 1);" >> $PROFILE_PATH/user.js
 
 # - enable custom chrome css
 echo "user_pref(\"toolkit.legacyUserProfileCustomizations.stylesheets\", true);" >> $PROFILE_PATH/user.js
+# - dissable dragging tab to new window
+echo "user_pref(\"browser.tabs.allowTabDetach\", false);" >> $PROFILE_PATH/user.js
 
 # - create css file
 mkdir $PROFILE_PATH/chrome

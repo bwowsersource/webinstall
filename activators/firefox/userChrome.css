@@ -1,19 +1,53 @@
-#TabsToolbar
+/* #TabsToolbar
 {
     visibility: collapse;
-}
+} */
 
-#back-button
+/* #back-button
 {
     display: none;
-}
+} */
 
-#forward-button
+/* #forward-button
 {
     display: none;
-}
+} */
 
-#userContext-icons
+/* #userContext-icons
 {
     visibility: collapse;
+} */
+
+/* hide nav-bar*/
+
+#nav-bar:not([customizing="true"]):not([inFullscreen]) {
+    min-height: 1px !important;
+    max-height: 0px !important;
+    margin-top: 1px !important;
+    margin-bottom: -1px !important;
+    transition: all 50ms linear 0s !important;
+    z-index: -5 !important;
 }
+
+#tabs-newtab-button {
+    display: none !important;
+}
+
+
+.tabbrowser-tab .tab-close-button {
+    /* enable pointer events on close button*/
+    pointer-events: auth;
+}
+
+.tabbrowser-tab:first-of-type .tab-close-button {
+    visibility: collapse !important;
+}
+
+.tabbrowser-tab:only-of-type * {
+    background: none !important;
+}
+
+#PersonalToolbar {
+    visibility: collapse !important;
+}
+
