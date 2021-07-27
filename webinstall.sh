@@ -1,18 +1,21 @@
 #!/bin/bash
 
 #base values
-ROOT=$(pwd) #"$(dirname "$0")"
-echo ROOT $ROOT
+# "$(dirname "$0")"
+ROOT=$(dirname "$0")
+# echo ROOT $ROOT
 TEMPLATE_INSTALL_SCRIPT="app-install.sh"
 PROFILE_NAME=$3
 
-source $ROOT/config
+source $ROOT/config # requires bash
 
 # create assets folder if not existing
 ASSETS_DIR=${ROOT}/installed-assets
 mkdir -p $ASSETS_DIR
 
-if [ $1 == "--help" ] || [ $1 == "-h" ]; then
+if [ -z "$1" ];then
+    echo "No input given. add -h option to learn more"
+elif [ $1 == "--help" ] || [ $1 == "-h" ]; then
     printf "\n"
     printf "webinstall [option -i,-l,-u,-h] [url/appIp] [container]\n"
     printf "\n"

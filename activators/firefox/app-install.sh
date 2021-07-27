@@ -17,7 +17,7 @@ CNF_EXEC="firefox -P $PROFILE_NAME "
 DEFAULT_PROFILE_PATH=~/.mozilla/firefox/
 PROFILES_INI=${DEFAULT_PROFILE_PATH}/profiles.ini
 if [ -f "$PROFILES_INI" ]; then
-    echo "$FILE exists."
+    echo "$PROFILES_INI exists."
     PROFILE_PATH=$DEFAULT_PROFILE_PATH$(awk -F "=" '/Path/ {print $2}' $PROFILES_INI | grep $PROFILE_NAME)
 fi
 
