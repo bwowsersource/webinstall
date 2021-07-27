@@ -1,3 +1,4 @@
+@import url("autohide_main_toolbar.css");
 /* #TabsToolbar
 {
     visibility: collapse;
@@ -20,14 +21,14 @@
 
 /* hide nav-bar*/
 
-#nav-bar:not([customizing="true"]):not([inFullscreen]) {
+/* #nav-bar:not([customizing="true"]):not([inFullscreen]) {
     min-height: 1px !important;
     max-height: 0px !important;
     margin-top: 1px !important;
     margin-bottom: -1px !important;
     transition: all 50ms linear 0s !important;
     z-index: -5 !important;
-}
+} */
 
 #tabs-newtab-button {
     display: none !important;

@@ -40,5 +40,5 @@ echo "user_pref(\"toolkit.legacyUserProfileCustomizations.stylesheets\", true);"
 echo "user_pref(\"browser.tabs.allowTabDetach\", false);" >> $PROFILE_PATH/user.js
 
 # - create css file
-mkdir $PROFILE_PATH/chrome
-cp ${ROOT}/activators/firefox/userChrome.css $PROFILE_PATH/chrome/userChrome.css
+mkdir -p $PROFILE_PATH/chrome
+cp ${ROOT}/activators/firefox/*.css $PROFILE_PATH/chrome/
