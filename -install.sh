@@ -13,11 +13,11 @@ fi
 URL="https://${APP_ID}"
 
 
-# TITLE=$(curl -sL ${URL} | perl -l -0777 -ne 'print $1 if /<title.*?>\s*(.*?)\s*<\/title/si')
+TITLE=$(curl -sL ${URL} | perl -l -0777 -ne 'print $1 if /<title.*?>\s*(.*?)\s*<\/title/si')
 
 DOMAIN=$([[ $APP_ID =~ ^(.*\.)?([^\.]+\.[^\.]+)$ ]] && echo ${BASH_REMATCH[2]})
 
-TITLE=$DOMAIN
+TITLE="$TITLE | $DOMAIN"
 echo "App title: $TITLE"
 APP_PATH=$ASSETS_DIR/$DOMAIN
 ICON=$APP_PATH/$APP_ID-icon.ico
