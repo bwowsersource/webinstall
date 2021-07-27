@@ -15,6 +15,7 @@ WEBINSTALL_RC_FILE_NAME=".webinstallrc"
 # done
 
 # git clone files
+rm -rf $DEFAULT_INSTALL_PATH
 mkdir -p $DEFAULT_INSTALL_PATH
 git clone --depth=1 --branch=master https://github.com/bwowsersource/webinstall.git $DEFAULT_INSTALL_PATH
 rm -rf $DEFAULT_INSTALL_PATH/.git
@@ -27,7 +28,7 @@ if [ -f $PATH_TO_FILE ]; then
     # install .webinstallrc file
     RC_PATH=$DEFAULT_INSTALL_PATH/$WEBINSTALL_RC_FILE_NAME
     # write to file
-    echo "alias webinstall=\"sh $DEFAULT_INSTALL_PATH/webinstall.sh\"" > $RC_PATH
+    echo "alias webinstall=\"bash $DEFAULT_INSTALL_PATH/webinstall.sh\"" > $RC_PATH
     SOURCE_COMMAND="source $RC_PATH"
 
     # check if file already has source command
